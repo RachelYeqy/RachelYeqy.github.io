@@ -1,5 +1,5 @@
 ## Hi there 👋
-
+💖This is the repository for IS445 Data Visualization Course!
 <!--
 **RachelYeqy/RachelYeqy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
