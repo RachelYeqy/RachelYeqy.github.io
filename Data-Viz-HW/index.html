@@ -12,44 +12,43 @@
     <h1>📊 Data Visualization Homework 6 📊</h1>
     
     <h2>Resources:</h2>
-    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv"> 📂 The Data</a>
+    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv"> 📂 The Data: Building Inventory Dataset</a>
     <br>
-    <a href="https://us.prairielearn.com/pl/workspace/2452430">🧑‍💻 The Analysis</a>
+    <a href="https://us.prairielearn.com/pl/workspace/2452430">🧑‍💻 The Analysis Code</a>
 
     <h2>Plot 1: Building Numbers and Status Over Time</h2>
 
     <div id="chart1"></div>
-    <p>This bar chart visualizes the distribution of different usage categories in the dataset. It includes interactivity to highlight specific categories by hovering over the legend.</p>
     
-    <p><strong>Description:</strong></p>
-    <p>This chart visualizes the distribution of buildings across different decades, specifically comparing the total number of buildings to the proportion of buildings that are currently "In Use" 🏢. The data is grouped by decade (i.e., ranges of 10 years), allowing people to observe trends in building construction and usage over time 📅.</p>
 
-    <p><strong>Design Choices:</strong></p>
+    <p><strong>💌 Description:</strong></p>
+    <p>This chart visualizes the distribution of buildings across different decades, specifically comparing the total number of buildings to the proportion of buildings that are currently "In Use". Grouping the data by decade reveals trends in construction and usage over time. It highlights how building activity has evolved and the proportion of buildings still actively used, providing valuable insights for urban development, property management, and resource allocation.</p>
+    <p><strong>📝 Design Choices:</strong></p>
     <ul>
         <li><strong>Layered Approach:</strong> I used a layered approach with two distinct chart types:
             <ul>
-                <li><strong>Bar Chart:</strong> Represents the total count of buildings for each decade. I encoded the decade (discrete) on the x-axis and the total count of buildings (quantitative) on the y-axis 📊. This allows the viewer to clearly see the number of buildings in each decade.</li>
-                <li><strong>Line Chart:</strong> Shows the proportion of buildings that are "In Use" across decades. I encoded the decade on the x-axis and the proportion of buildings In Use (quantitative) on the y-axis 📈. The scale is limited to a range of 0 to 1 to represent a proportion.</li>
+                <li><strong>Bar Chart:</strong> Represents the total count of buildings for each decade. I encoded the decade (discrete) on the x-axis and the total count of buildings (quantitative) on the y-axis. This allows the viewer to clearly see the number of buildings in each decade.</li>
+                <li><strong>Line Chart:</strong> Shows the proportion of buildings that are "In Use" across decades. I encoded the decade on the x-axis and the proportion of buildings In Use (quantitative) on the y-axis. The scale is limited to a range of 0 to 1 to represent a proportion.</li>
             </ul>
         </li>
         <li><strong>Color Scheme:</strong>
             <ul>
-                <li>The bar chart is colored using <strong>steel blue</strong>, a color that is easy on the eyes and works well with the other chart's <strong>red line</strong> 🔵🔴. It visually distinguishes the total count from the line chart.</li>
+                <li>The bar chart is colored using <strong>steel blue</strong>, a color that is easy on the eyes and works well with the other chart's <strong>red line</strong>. It visually distinguishes the total count from the line chart.</li>
             </ul>
         </li>
     </ul>
 
-    <p><strong>Data Transformations:</strong></p>
+    <p><strong>🔧 Data Transformations:</strong></p>
     <ul>
-        <li>First, I extracted the year of construction and building status from the dataset and dropped any rows with missing values 🚫.</li>
-        <li>I then transformed the year of construction into decades by performing a floor division (// 10) and multiplying by 10, so that all buildings are grouped by the decade in which they were constructed 🏗️📅.</li>
-        <li>Afterward, I calculated the total number of buildings for each decade using a group-by operation 🔢.</li>
-        <li>Similarly, I calculated the count of buildings "In Use" by filtering the data based on the building status and aggregating by decade 🏢.</li>
-        <li>Finally, I computed the proportion of buildings "In Use" by dividing the count of buildings "In Use" by the total count of buildings for each decade 📊.</li>
+        <li>First, I extracted the year of construction and building status from the dataset and <strong>dropped any rows with missing values </strong>.</li>
+        <li>I then transformed the year of construction into decades by performing a <strong>floor division</strong> (// 10) and <strong>multiplying</strong> by 10, so that all buildings are grouped by the decade in which they were constructed.</li>
+        <li>Afterward, I calculated the total number of buildings for each decade using a <strong> group-by </strong> operation.</li>
+        <li>Similarly, I calculated the count of buildings "In Use" by filtering the data based on the building status and <strong>aggregating by decade</strong>.</li>
+        <li>Finally, I computed the proportion of buildings "In Use" by dividing the count of buildings "In Use" by the total count of buildings for each decade.</li>
     </ul>
 
-    <p><strong>Interactivity:</strong></p>
-    <p>For this plot, I included <strong>tooltips</strong> to add interactivity ✨. The tooltip can display the exact counts or proportions when hovering over the bars or line points. This would allow viewers to obtain more precise data values directly from the chart, enhancing the clarity of the information presented 🖱️.</p>
+    <p><strong>✨ Interactivity:</strong></p>
+    <p>For this plot, I included <strong>tooltips</strong> to add interactivity ✨. The tooltip can display the exact counts or proportions when hovering over the bars or line points. This would allow viewers to obtain more precise data values directly from the chart, enhancing the clarity of the information presented.</p>
 
 
     <h2>Chart 2: Line Chart with Filtering</h2>
