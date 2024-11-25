@@ -11,11 +11,6 @@
 <body>
     <h1>📊 Data Visualization Homework 6 📊</h1>
     
-    <h2>Resources:</h2>
-    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv"> 📂 The Data: Building Inventory Dataset</a>
-    <br>
-    <a href="https://us.prairielearn.com/pl/workspace/2452430">🧑‍💻 The Analysis Code</a>
-
     <h2>Plot 1: Building Numbers and Status Over Time</h2>
 
     <div id="chart1"></div>
@@ -48,14 +43,48 @@
     </ul>
 
     <p><strong>✨ Interactivity:</strong></p>
-    <p>For this plot, I included <strong>tooltips</strong> to add interactivity ✨. The tooltip can display the exact counts or proportions when hovering over the bars or line points. This would allow viewers to obtain more precise data values directly from the chart, enhancing the clarity of the information presented.</p>
+    <p>For this plot, I included <strong>tooltips</strong> to add interactivity. The tooltip can display the exact counts or proportions when hovering over the bars or line points. This would allow viewers to obtain more precise data values directly from the chart, enhancing the clarity of the information presented.</p>
 
 
-    <h2>Chart 2: Line Chart with Filtering</h2>
+    <h2>Plot 2: Building Statistics Over Time by County</h2>
     <div id="chart2"></div>
-    <p>This line chart displays the trend of average square footage over time for years after 2000, providing insights into long-term changes in building space usage.</p>
+    <p><strong>💌 Description:</strong></p>
+    <p>This set of visualizations explores building statistics over time, segmented by county. The first one visualizes the total number of buildings constructed per year, while the subsequent charts display trends in average square footage and average number of floors for buildings across different counties. These visualizations allow users to see how construction activity, building sizes, and floor counts have evolved over time, giving insights into changes in urban development and the scale of buildings in different regions.</p>
+    <p><strong>📝 Design Choices:</strong></p>
+    <ul>
+        <li><strong>Encoding:</strong> The x-axis across all charts represents the <strong>"Year Constructed"</strong> (ordinal). The y-axis is encoded differently for each chart to reflect the specific metric:
+            <ul>
+                <li> Chart 1: Building Count Over Time: The y-axis represents the total number of buildings constructed in each year (quantitative). This allows us to observe the trends in building activity, showing how many buildings were constructed each year.</li>
+                <li> Chart 2: Average Square Footage Over Time: The y-axis shows the average square footage of buildings constructed each year (quantitative). This chart allows viewers to track changes in the size of buildings, providing insights into whether buildings have gotten larger or smaller over time.</li>
+                <li>     * Chart 3: Average Total Floors Over Time: The y-axis reflects the average number of floors in buildings constructed each year (quantitative). This metric highlights trends in building height and can reveal whether new buildings are becoming taller on average.</li>
+            </ul>
+        </li>
+        <li><strong>Color Scheme:</strong>
+            <ul>
+                <li>A unique color is assigned to each county, ensuring that trends from different counties are easily distinguishable. This color consistency across all three charts allows viewers to compare similar data points (building count, square footage, and number of floors) for each county, facilitating clear analysis across multiple dimensions.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><strong>🔧 Data Transformations:</strong></p>
+    <p>To prepare the data for these visualizations, the following steps were taken:</p>
+    <ul>
+        <li><strong>Data Selection:</strong> I selected the relevant columns: "Year Constructed," "County," "Square Footage," and "Total Floors." Rows with missing values were dropped to ensure clean data for analysis.</li>
+        <li><strong>Aggregation:</strong> The data was grouped by "Year Constructed" and "County." For each group, I computed: The total number of buildings (building_count) by counting the "Square Footage" entries. The average square footage (avg_square_footage) and average total floors (avg_total_floors) for each county in each year.</li>
+        <li>These aggregations helped to calculate meaningful statistics for each county, which are then visualized in the charts.</li>
+    </ul>
+
+    <p><strong>✨ Interactivity:</strong></p>
+    <p>The primary interactivity in this visualization comes from a <strong>dropdown selection for counties</strong>. Users can choose which county they would like to view, and the charts will update to reflect the data for that selected county. This interactivity is helpful because it allows users to focus on specific counties without being overwhelmed by the data for all counties at once. It enables detailed exploration of trends at the county level, offering more personalized and targeted insights.</p>
     
-    
+
+
+
+    <h2>Resources:</h2>
+    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv"> 📂 The Data: Building Inventory Dataset</a>
+    <br>
+    <a href="https://us.prairielearn.com/pl/workspace/2452430">🧑‍💻 The Analysis Code</a>
+
     
     <script>
         // Embed Chart 1 (use raw GitHub URL for chart1.json)
