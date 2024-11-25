@@ -16,9 +16,9 @@
     <div id="chart1"></div>
     
 
-    <p><strong>💌 Description:</strong></p>
+    <h3>💌 Description:</h3>
     <p>This chart visualizes the distribution of buildings across different decades, specifically comparing the total number of buildings to the proportion of buildings that are currently "In Use". Grouping the data by decade reveals trends in construction and usage over time. It highlights how building activity has evolved and the proportion of buildings still actively used, providing valuable insights for urban development, property management, and resource allocation.</p>
-    <p><strong>📝 Design Choices:</strong></p>
+    <h3>📝 Design Choices:</h3>
     <ul>
         <li><strong>Layered Approach:</strong> I used a layered approach with two distinct chart types:
             <ul>
@@ -33,7 +33,7 @@
         </li>
     </ul>
 
-    <p><strong>🔧 Data Transformations:</strong></p>
+    <h3>🔧 Data Transformations:</h3>
     <ul>
         <li>First, I extracted the year of construction and building status from the dataset and <strong>dropped any rows with missing values </strong>.</li>
         <li>I then transformed the year of construction into decades by performing a <strong>floor division</strong> (// 10) and <strong>multiplying</strong> by 10, so that all buildings are grouped by the decade in which they were constructed.</li>
@@ -42,7 +42,7 @@
         <li>Finally, I computed the proportion of buildings "In Use" by dividing the count of buildings "In Use" by the total count of buildings for each decade.</li>
     </ul>
 
-    <p><strong>✨ Interactivity:</strong></p>
+    <h3>✨ Interactivity:</h3>
     <p>For this plot, I included <strong>tooltips</strong> to add interactivity. The tooltip can display the exact counts or proportions when hovering over the bars or line points. This would allow viewers to obtain more precise data values directly from the chart, enhancing the clarity of the information presented.</p>
 
 
@@ -53,11 +53,11 @@
     <ul>
         <li><strong>✅ Tip:</strong> Use the dropdown menu to select a specific county of interest. The charts will update dynamically to display data for the chosen county.</li>
         <li><strong>🟥 Note:</strong> some counties have fewer records, which may result in limited data for certain years. This is expected and reflects the dataset's characteristics.</li>
-    <ul>
+    </ul>
 
-    <h3><strong>💌 Description:</strong></h3>
+    <h3>💌 Description:</h3>
     <p>This set of visualizations explores building statistics over time, segmented by county. The first one visualizes the total number of buildings constructed per year, while the subsequent charts display trends in average square footage and average number of floors for buildings across different counties. These visualizations allow users to see how construction activity, building sizes, and floor counts have evolved over time, giving insights into changes in urban development and the scale of buildings in different regions.</p>
-    <p><strong>📝 Design Choices:</strong></p>
+    <h3><strong>📝 Design Choices:</strong></h3>
     <ul>
         <li><strong>Encoding:</strong> The x-axis across all charts represents the <strong>"Year Constructed"</strong> (ordinal). The y-axis is encoded differently for each chart to reflect the specific metric:
             <ul>
@@ -73,7 +73,7 @@
         </li>
     </ul>
 
-    <p><strong>🔧 Data Transformations:</strong></p>
+    <h3>🔧 Data Transformations:</h3>
     <p>To prepare the data for these visualizations, the following steps were taken:</p>
     <ul>
         <li><strong>Data Selection:</strong> I selected the relevant columns: "Year Constructed," "County," "Square Footage," and "Total Floors." Rows with missing values were dropped to ensure clean data for analysis.</li>
@@ -81,7 +81,7 @@
         <li>These aggregations helped to calculate meaningful statistics for each county, which are then visualized in the charts.</li>
     </ul>
 
-    <p><strong>✨ Interactivity:</strong></p>
+    <h3>✨ Interactivity:</h3>
     <p>The primary interactivity in this visualization comes from a <strong>dropdown selection for counties</strong>. Users can choose which county they would like to view, and the charts will update to reflect the data for that selected county. This interactivity is helpful because it allows users to focus on specific counties without being overwhelmed by the data for all counties at once. It enables detailed exploration of trends at the county level, offering more personalized and targeted insights.</p>
     
 
