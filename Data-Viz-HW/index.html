@@ -20,7 +20,7 @@
     <p>This chart visualizes the distribution of buildings across different decades, specifically comparing the total number of buildings to the proportion of buildings that are currently "In Use". Grouping the data by decade reveals trends in construction and usage over time. It highlights how building activity has evolved and the proportion of buildings still actively used, providing valuable insights for urban development, property management, and resource allocation.</p>
     <h3>📝 Design Choices:</h3>
     <ul>
-        <li><strong>Layered Approach:</strong> I used a layered approach with two distinct chart types:
+        <li><strong>Layered Approach & Encodings:</strong> I used a layered approach with two distinct chart types:
             <ul>
                 <li><strong>Bar Chart:</strong> Represents the total count of buildings for each decade. I encoded the decade (discrete) on the x-axis and the total count of buildings (quantitative) on the y-axis. This allows the viewer to clearly see the number of buildings in each decade.</li>
                 <li><strong>Line Chart:</strong> Shows the proportion of buildings that are "In Use" across decades. I encoded the decade on the x-axis and the proportion of buildings In Use (quantitative) on the y-axis. The scale is limited to a range of 0 to 1 to represent a proportion.</li>
@@ -52,14 +52,14 @@
     <h4>🔔 Usage Instructions</h4>
     <ul>
         <li><strong>✅ Tip:</strong> Use the dropdown menu to select a specific county of interest. The charts will update dynamically to display data for the chosen county.</li>
-        <li><strong>🟥 Note:</strong> some counties have fewer records, which may result in limited data for certain years. This is expected and reflects the dataset's characteristics.</li>
+        <li><strong>🟥 Note:</strong> some counties have fewer records, which may result in limited data for certain years.</li>
     </ul>
 
     <h3>💌 Description:</h3>
     <p>This set of visualizations explores building statistics over time, segmented by county. The first one visualizes the total number of buildings constructed per year, while the subsequent charts display trends in average square footage and average number of floors for buildings across different counties. These visualizations allow users to see how construction activity, building sizes, and floor counts have evolved over time, giving insights into changes in urban development and the scale of buildings in different regions.</p>
     <h3><strong>📝 Design Choices:</strong></h3>
     <ul>
-        <li><strong>Encoding:</strong> The x-axis across all charts represents the <strong>"Year Constructed"</strong> (ordinal). The y-axis is encoded differently for each chart to reflect the specific metric:
+        <li><strong>Encodings:</strong> The x-axis across all charts represents the <strong>"Year Constructed"</strong> (ordinal). The y-axis is encoded differently for each chart to reflect the specific metric:
             <ul>
                 <li> <strong>Chart 1: Building Count Over Time. </strong> The y-axis represents the total number of buildings constructed in each year (quantitative). This allows us to observe the trends in building activity, showing how many buildings were constructed each year.</li>
                 <li> <strong>Chart 2: Average Square Footage Over Time. </strong>The y-axis shows the average square footage of buildings constructed each year (quantitative). This chart allows viewers to track changes in the size of buildings, providing insights into whether buildings have gotten larger or smaller over time.</li>
