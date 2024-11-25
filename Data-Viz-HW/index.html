@@ -9,8 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
-    <h1>Welcome to the Data-Viz-HW Page!</h1>
+    <h1>Data Visualization HW6 Page</h1>
     
+    <h3>Resources:</h3>
+    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">The Data</a>
+    <br>
+    <a href="https://us.prairielearn.com/pl/workspace/2452430">The Analysis</a>
+
     <h2>Chart 1: Bar Chart of Categories</h2>
     <div id="chart1"></div>
     <p>This bar chart visualizes the distribution of different usage categories in the dataset. It includes interactivity to highlight specific categories by hovering over the legend.</p>
@@ -19,17 +24,14 @@
     <div id="chart2"></div>
     <p>This line chart displays the trend of average square footage over time for years after 2000, providing insights into long-term changes in building space usage.</p>
     
-    <h3>Resources:</h3>
-    <a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/building_inventory.csv">The Data</a>
-    <br>
-    <a href="https://us.prairielearn.com/pl/workspace/2452430">The Analysis</a>
+    
     
     <script>
-        // Embed Chart 1
-        vegaEmbed('#chart1', 'https://github.com/RachelYeqy/RachelYeqy.github.io/blob/main/Data-Viz-HW/chart1.json').catch(console.error);
+        // Embed Chart 1 (use raw GitHub URL for chart1.json)
+        vegaEmbed('#chart1', 'https://raw.githubusercontent.com/RachelYeqy/RachelYeqy.github.io/main/Data-Viz-HW/chart1.json').catch(console.error);
         
-        // Embed Chart 2
-        vegaEmbed('#chart2', 'https://github.com/RachelYeqy/RachelYeqy.github.io/blob/main/Data-Viz-HW/chart2.json').catch(console.error);
+        // Embed Chart 2 (use raw GitHub URL for chart2.json)
+        vegaEmbed('#chart2', 'https://raw.githubusercontent.com/RachelYeqy/RachelYeqy.github.io/main/Data-Viz-HW/chart2.json').catch(console.error);
     </script>
 
 </body>
